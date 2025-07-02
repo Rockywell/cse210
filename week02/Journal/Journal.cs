@@ -1,14 +1,18 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
+
 
 public class Journal
 {
-    public string Owner { get; set; }
-    public List<Entry> Entries { get; set; } = new List<Entry>();
+    [JsonInclude]
+    public string _owner;
+    [JsonInclude]
+    public List<Entry> _entries = new List<Entry>();
 
     public void Display()
     {
-        Console.WriteLine($"Owner: {Owner}\nEntries:");
-        foreach (Entry entry in Entries)
+        Console.WriteLine($"Owner: {_owner}\nEntries:");
+        foreach (Entry entry in _entries)
         {
             entry.Display();
             Console.WriteLine();
@@ -40,7 +44,11 @@ public class Journal
             return journal;
         }
 
-        Console.WriteLine("File not found.");
-        return new Journal();
+        Console.WriteLine("File not found. Making new journal...");
+        Console.WriteLine("This journal is property of:");
+        return new Journal
+        {
+            _owner = Console.ReadLine()
+        };
     }
 }

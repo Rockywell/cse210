@@ -18,7 +18,7 @@ class Program
             if (option == 5)
             {
                 Console.WriteLine("This journal is property of:");
-                journal.Owner = Console.ReadLine();
+                journal._owner = Console.ReadLine();
             }
 
             Console.Write("Please select a choice.\n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\n");
@@ -30,7 +30,7 @@ class Program
                 case 1:
                     Entry entry = new Entry();
                     entry.Prompt();
-                    journal.Entries.Add(entry);
+                    journal._entries.Add(entry);
                     break;
                 case 2:
                     journal.Display();
@@ -42,7 +42,7 @@ class Program
                     journal.Save();
                     break;
                 case 5:
-                    Console.WriteLine($"Thank you for journaling me, {journal.Owner}!");
+                    Console.WriteLine($"Thank you for journaling me, {journal._owner}!");
                     break;
             }
 
