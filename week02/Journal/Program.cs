@@ -1,10 +1,10 @@
-using System;
-
+@"I showed my creativity by allowing the writer of the journal to put themselves as the owner/author of the journal and formatted all the classes to work with JSON files."
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
+
 
 
         Journal journal = new Journal();
