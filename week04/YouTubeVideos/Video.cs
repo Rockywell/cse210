@@ -14,9 +14,9 @@ class Video
     }
 
     public int GetNumComments => _comments.Count;
-    public string GetInfo => $"Title: {_title}\nAuthor: {_author}\nLength: {_length} seconds\nNumber of Comments: {this.GetNumComments}";
-    public string GetComments => "\t" + string.Join("\n\t", _comments.Select(comment => comment.GetText));
+    public string GetInfo() => $"Title: {_title}\nAuthor: {_author}\nLength: {_length} seconds\nNumber of Comments: {this.GetNumComments}";
+    public string GetComments() => "\t" + string.Join("\n\t", _comments.Select(comment => comment.GetText));
 
     public void AddComment(Comment comment) => _comments.Add(comment);
-    public void DisplayAll() => Console.WriteLine($"{this.GetInfo}\n\nComments:\n{this.GetComments}\n");
+    public void DisplayAll() => Console.WriteLine($"{this.GetInfo()}\n\nComments:\n{this.GetComments()}\n");
 }

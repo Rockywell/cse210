@@ -36,7 +36,7 @@ class Program
 
         foreach (Video video in videos)
         {
-            video.DisplayAll();
+            Console.WriteLine($"{video.GetInfo()}\n\nComments:\n{video.GetComments()}\n");
         }
     }
 }
