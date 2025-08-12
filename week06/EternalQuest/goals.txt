@@ -1,0 +1,4 @@
+100
+SimpleGoal:Fun,help myself have fun,30,False
+EternalGoal:Celestial Kingdom,Live in the Celestial Kingdom with my family,10000
+ChecklistGoal:Champion,Become the Pickler Champion,100,3,500,1

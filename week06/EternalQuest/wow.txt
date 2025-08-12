@@ -1,0 +1,5 @@
+98
+SimpleGoal:WOW,asdf,24,True
+ChecklistGoal:MOM,asdf,20,2,100,0
+ChecklistGoal:DONE,asdf,1,1,1,1
+SimpleGoal:NeverDone,alsdf,123,False
